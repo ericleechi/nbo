@@ -1,0 +1,20 @@
+
+<mat-form-field>
+    <mat-label [hidden]="customerService.selectedValue.getValue()">Select a customer</mat-label>
+    <mat-label [hidden]="!customerService.selectedValue.getValue()">Customer</mat-label>
+    
+    <mat-select> 
+        <mat-optgroup *ngFor="let group of groups | keyvalue" [label]="group.value[0].type.display">
+            <mat-option *ngFor="let customer of group.value" [value]="customer" (click)="customerService.setActiveCustomer(customer.id)">
+                <div class="customer-item">
+                            <strong>
+                                {{ customer.displayName }}
+                            </strong>
+                            <code-values-display [codeValues]="[customer.type,customer.identifier]"></code-values-display>
+                        </div>
+            </mat-option>
+        </mat-optgroup>
+          
+    </mat-select>
+</mat-form-field>
+

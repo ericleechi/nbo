@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+  margin:0;
+}
+.main-col{
+ display: flex;
+}
+.customer-col{
+  height: 90px;
+  display: flex;
+  padding: 15px;
+  background: #f5f5f5;
+  align-items: center;
+  .customer-list > * > *{
+    width: 30vw;
+  }
+}
+.selection-col{
+  width: 450px;
+  height: 100%;
+  box-sizing: border-box;
+ 
+  .product-list{
+    max-height: calc(100vh - 150px);
+    overflow: auto;
+    padding: 15px;
+  }
+}
+
+.product-col{
+  display :flex;
+  flex-direction: column;
+  flex: 9;
+}
+.full-width{
+  width: 100%;
+}

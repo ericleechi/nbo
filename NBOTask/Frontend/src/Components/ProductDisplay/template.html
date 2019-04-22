@@ -1,0 +1,22 @@
+<div class="product-display" *ngIf="!!product">
+    
+    <mat-card>
+      <mat-card-title>
+          {{product.name}}
+      </mat-card-title>
+      <mat-card-content>
+          <div>
+              {{product.description}}
+          </div>
+
+      
+      </mat-card-content>
+    
+      <mat-card-actions >
+        <button color="primary" mat-raised-button (click)="sendFeedback()">Feedback</button>
+      </mat-card-actions>
+     
+      </mat-card>
+  
+
+</div>

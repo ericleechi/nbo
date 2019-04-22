@@ -1,0 +1,29 @@
+        <div  *ngFor="let product of productList; let count = index" >
+                <mat-card [ngClass]="{'product-selected': product === productService.currentProduct.getValue()}" > 
+                    <mat-card-content>
+                        <div class="product-item">
+                                <div>
+                                    
+                                    <strong>
+                                        {{count +1}}. {{ product.name }}
+
+                                    </strong>
+                                    <p>
+                                            {{product.description}}
+
+                                    </p>
+                    
+                                </div>
+                                <div class="action">
+                                    <button color="primary"  (click)="productService.selectActiveProduct(product)" mat-raised-button>Make Presentation</button>
+                                </div>
+                        </div>
+                        
+                    </mat-card-content>
+                  </mat-card>
+                <br/>      
+            </div>
+            
+
+
+ 

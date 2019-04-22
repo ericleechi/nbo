@@ -1,0 +1,6 @@
+<mat-chip-list>
+    <mat-chip *ngFor="let codeValue of codeValues">
+      <span *ngIf="identifierService.translate(codeValue.code)">{{identifierService.translate(codeValue.code)}} : </span>{{codeValue.display}}
+    </mat-chip>
+</mat-chip-list>
+  

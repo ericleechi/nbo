@@ -1,0 +1,34 @@
+<div mat-dialog-content>
+  <mat-form-field class="full-width feedback">
+    <textarea type="text" [(ngModel)]="feedback"  required matAutosizeMinRows=5 rows="5" matInput placeholder="feedback"></textarea>
+  </mat-form-field>
+  <div >
+    
+    <div>
+        <mat-label>Rating</mat-label>
+    </div>
+    <div>
+        <mat-button-toggle-group [(ngModel)]="rating" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle  value=1>
+              <mat-icon>star</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value=2>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value=3>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+
+    </div>
+  
+  </div>
+ 
+</div>
+<div mat-dialog-actions class="space-between">
+  <button mat-button [disabled]="!feedback" color="warn" (click)="onNoClick()">Reject Offer</button>
+  <button mat-button [disabled]="!feedback" color="primary" (click)="onYesClick()" cdkFocusInitial>Accept Offer</button>
+</div>
